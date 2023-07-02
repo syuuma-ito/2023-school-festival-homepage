@@ -1,0 +1,187 @@
+:root {
+    --dialog-RGBA-color: rgba(0, 255, 0, 0.65);
+    --dialog-BG-color: rgba(0, 255, 0, 0.05);
+}
+
+@-webkit-keyframes blink {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@-moz-keyframes blink {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes blink {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.dialog-frame {
+    display: block;
+    padding: 1px;
+    position: relative;
+}
+
+.dialog-border {
+    border-color: var(--main-text-color);
+    box-shadow: 0 0 4px var(--dialog-RGBA-color);
+}
+
+.dialog-hide .dialog-border {
+    height: 0;
+    width: 0;
+}
+
+.dialog-border-left {
+    top: 50%;
+    left: 0;
+    height: 100%;
+    transform: translate(0, -50%);
+    border-width: 0 0 0 1px;
+}
+
+.dialog-border-anim {
+    z-index: 1;
+    opacity: 1;
+    position: absolute;
+    transition: all 250ms ease-in;
+    border-style: solid;
+}
+
+.dialog-border-right {
+    top: 50%;
+    right: 0;
+    height: 100%;
+    transform: translate(0, -50%);
+    border-width: 0 0 0 1px;
+}
+
+.dialog-border-top {
+    top: 0;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, 0);
+    border-width: 1px 0 0 0;
+}
+
+.dialog-border-bottom {
+    left: 50%;
+    width: 100%;
+    bottom: 0;
+    transform: translate(-50%, 0);
+    border-width: 1px 0 0 0;
+}
+
+.dialog-corner {
+    width: 24px;
+    height: 24px;
+    border-color: var(--main-text-color);
+    box-shadow: 0 0 4px -2px var(--dialog-RGBA-color);
+}
+
+.dialog-hide .dialog-corner {
+    width: 0;
+    height: 0;
+    opacity: 0;
+}
+
+.dialog-corner-anim {
+    z-index: 2;
+    opacity: 1;
+    position: absolute;
+    transition: all 250ms ease-in;
+    border-style: solid;
+}
+
+.dialog-corner__top-left {
+    left: -2px;
+    top: -2px;
+    border-width: 2px 0 0 2px;
+}
+
+.dialog-corner__bottom-left {
+    left: -2px;
+    bottom: -2px;
+    border-width: 0 0 2px 2px;
+}
+
+.dialog-corner__top-right {
+    right: -2px;
+    top: -2px;
+    border-width: 2px 2px 0 0;
+}
+
+.dialog-corner__bottom-right {
+    right: -2px;
+    bottom: -2px;
+    border-width: 0 2px 2px 0;
+}
+
+.dialog-frame-text {
+    background-color: var(--dialog-BG-color);
+}
+.dialog-frame-text- {
+    padding: 1%;
+    font-size: 19px;
+    letter-spacing: 5px;
+}
+@media screen and (min-width: 960px) {
+    .dialog-frame-text- {
+        padding: 1%;
+        font-size: 25px;
+        letter-spacing: 5px;
+    }
+}
+
+.dialog-frame-text-::after {
+    content: "_";
+    -webkit-animation: blink 0.5s ease-in-out infinite alternate;
+    -moz-animation: blink 0.5s ease-in-out infinite alternate;
+    animation: blink 0.5s ease-in-out infinite alternate;
+}
+
+.dialog-hide .dialog-frame-text {
+    background-color: transparent;
+    visibility: hidden;
+}
+
+.dialog-frame-text-anim {
+    z-index: 3;
+    display: block;
+    position: relative;
+    overflow: hidden;
+    transition: background-color 250ms ease-in;
+}
+
+.dialog-container {
+    color: var(--main-text-color);
+    line-height: 1.5;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 40vh;
+    height: 15vh;
+}
+
+@media screen and (min-width: 960px) {
+    .dialog-container {
+        color: var(--main-text-color);
+        line-height: 1.5;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+}
+.dialog-frame-text {
+    text-align: center;
+}
