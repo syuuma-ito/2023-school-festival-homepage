@@ -1,36 +1,69 @@
-const sleep = waitTime => new Promise( resolve => setTimeout(resolve, waitTime) );
-const waitClick = () => new Promise(resolve => document.addEventListener("click", resolve));
-let isClick = false
+const sleep = (waitTime) => new Promise((resolve) => setTimeout(resolve, waitTime));
+const waitClick = () => new Promise((resolve) => document.addEventListener("click", resolve));
+function randomSelected(array, count) {
+    const copyArray = [...array];
+    const randomArray = [...Array(count)].map(() => {
+        const randomStartIndex = Math.floor(Math.random() * copyArray.length);
+        return copyArray.splice(randomStartIndex, 1).at();
+    });
 
-async function typing(selector,text,type_speed){
-    text_elemnt = document.querySelector(selector)
+    return randomArray;
+}
+
+const opening_texts = ["時は20XX年...", "人類は自由に宇宙を旅できる技術を手に入れた...", "ここに続きの文章..."];
+
+async function typing(selector, text, type_speed) {
+    text_elemnt = document.querySelector(selector);
     if (text_elemnt === null) return;
-    let text_after = ""
+    let text_after = "";
 
     for await (char of text.split("")) {
         text_after = text_after + char;
-        text_elemnt.innerText = text_after
-        await sleep(type_speed)
+        text_elemnt.innerText = text_after;
+        await sleep(type_speed);
     }
-    await sleep(500);
-
 }
 
+async function typing_random(selector, text, type_speed) {
+    text_elemnt = document.querySelector(selector);
+    if (text_elemnt === null) return;
+    let text_after = "";
+    const random_text = "abcdefghijklmnopqrstuvw+-*/..,`@:=^<>";
+
+    for await (char of text.split("")) {
+        for await (random_num of randomSelected(random_text.split(""), 3)) {
+            text_elemnt.innerText = text_after + random_num;
+            await sleep(type_speed / 2);
+        }
+        text_after = text_after + char;
+        text_elemnt.innerText = text_after;
+        await sleep(type_speed);
+    }
+}
 
 async function finished_load() {
-    const type_speed = 70
-    const wait_speed = 2000
+    const type_speed = 70;
 
-    await sleep(500);
-    document.getElementById("dialog-frame1").classList.remove("dialog-hide");
     await sleep(1000);
-    await typing(".dialog-frame-text-","時は20XX年...",type_speed)
-    await waitClick();
-    await typing(".dialog-frame-text-","人類は自由に宇宙を旅できる技術を手に入れた...",type_speed)
-    await waitClick();
-    await typing(".dialog-frame-text-","ここに続きの文章...",type_speed)
-    await waitClick();
+
+    document.getElementById("dialog-frame1").classList.remove("dialog-hide");
+    document.getElementById("cursor-container").classList.remove("cursor-hide");
+
+    await sleep(1000);
+    for await (opening_text of opening_texts) {
+        await typing(".dialog-frame-text-", opening_text, type_speed);
+        await sleep(100);
+        await waitClick();
+    }
     document.getElementById("dialog-frame1").classList.add("dialog-hide");
+    document.getElementById("cursor-container").classList.add("cursor-hide");
+    await sleep(500);
+    await typing_random(".sub-title", "2-1クラス企画", 70);
+    await typing_random(".main-title", "◯◯◯◯◯◯◯◯", 70);
+    await sleep(2000);
+    document.getElementById("entry").classList.add("entry-hide");
+    await sleep(500);
+    document.getElementById("main").classList.remove("hide");
 }
 
 window.onload = finished_load;

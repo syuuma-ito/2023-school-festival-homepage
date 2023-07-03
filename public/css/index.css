@@ -56,3 +56,44 @@ body {
         transform: rotate(-45deg) translate(0, 0);
     }
 }
+.cursor-hide {
+    background-color: transparent;
+    visibility: hidden;
+}
+
+.title {
+    position: absolute;
+    text-align: center;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+.sub-title {
+    font-size: 16px;
+}
+.main-title {
+    font-size: 40px;
+}
+.entry-hide {
+    animation: fade-out 0.5s ease 0s 1 forwards;
+}
+
+@keyframes fade-out {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.hide {
+    background-color: transparent;
+    visibility: hidden;
+}
+
+.main {
+    text-align: center;
+}
