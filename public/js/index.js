@@ -10,7 +10,7 @@ function randomSelected(array, count) {
     return randomArray;
 }
 
-const opening_texts = ["時は20XX年...", "人類は自由に宇宙を旅できる技術を手に入れた...", "ここに続きの文章..."];
+const opening_texts = ["時は20XX年...", "人類は自由に宇宙を旅できる技術を手に入れた...", "ここに続きの文章...（みんなで考える）"];
 
 async function typing(selector, text, type_speed) {
     text_elemnt = document.querySelector(selector);
@@ -57,11 +57,6 @@ async function finished_load() {
     }
     document.getElementById("dialog-frame1").classList.add("dialog-hide");
     document.getElementById("cursor-container").classList.add("cursor-hide");
-    await sleep(500);
-    await typing_random(".sub-title", "2-1クラス企画", 70);
-    await typing_random(".main-title", "◯◯◯◯◯◯◯◯", 70);
-    await sleep(2000);
-    document.getElementById("entry").classList.add("entry-hide");
     await sleep(500);
     document.getElementById("main").classList.remove("hide");
 }
