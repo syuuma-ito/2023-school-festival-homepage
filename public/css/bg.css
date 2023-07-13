@@ -3,6 +3,7 @@
 .bg-container {
     perspective: 300px;
     overflow: hidden;
+    z-index: -100;
 }
 
 .bg-container,

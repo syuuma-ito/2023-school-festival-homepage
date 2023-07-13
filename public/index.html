@@ -6,6 +6,7 @@
         <link rel="stylesheet" href="./css/dialog.css" />
         <link rel="stylesheet" href="./css/index.css" />
         <link rel="stylesheet" href="./css/bg.css" />
+        <link rel="stylesheet" href="./css/menu.css" />
         <title>2-1 クラス企画</title>
     </head>
     <body>
@@ -34,12 +35,33 @@
                 <div class="main-title"></div>
             </div>
         </div>
-        <div class="bg-container">
-            <div class="bg1"></div>
-            <div class="bg2"></div>
-            <div class="bg3"></div>
-        </div>
-        <div class="hide main" id="main">
+
+        <div class="main hide" id="main">
+            <header class="header">
+                <div class="nav">
+                    <input id="drawer_input" class="drawer_hidden" type="checkbox" />
+                    <label for="drawer_input" class="drawer_open"><span></span></label>
+                    <nav class="nav_content">
+                        <ul class="nav_list">
+                            <li class="nav_item"><a href="">企画の説明</a></li>
+                            <li class="nav_item"><a href="">ゲームの詳細</a></li>
+                            <li class="nav_item"><a href="">スクリーンショット</a></li>
+                            <li class="nav_item"><a href="">サイトの設定</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </header>
+            <div class="bg-container">
+                <div class="bg1"></div>
+                <div class="bg2"></div>
+                <div class="bg3"></div>
+            </div>
+            <div class="title-container">
+                <div class="title-inner">
+                    <div class="sub-title">2-1 クラス企画</div>
+                    <div class="title">ここにロゴ</div>
+                </div>
+            </div>
             メインコンテンツ<br />
             ルール説明など...
         </div>
