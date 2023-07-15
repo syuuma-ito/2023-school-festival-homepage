@@ -7,6 +7,7 @@
         <link rel="stylesheet" href="./css/index.css" />
         <link rel="stylesheet" href="./css/bg.css" />
         <link rel="stylesheet" href="./css/menu.css" />
+        <link rel="stylesheet" href="./css/intro_dialog.css" />
         <title>2-1 クラス企画</title>
     </head>
     <body>
@@ -43,27 +44,72 @@
                     <label for="drawer_input" class="drawer_open"><span></span></label>
                     <nav class="nav_content">
                         <ul class="nav_list">
-                            <li class="nav_item"><a href="">企画の説明</a></li>
-                            <li class="nav_item"><a href="">ゲームの詳細</a></li>
-                            <li class="nav_item"><a href="">スクリーンショット</a></li>
+                            <li class="nav_item"><a href="">Introduction</a></li>
+                            <li class="nav_item"><a href="#info">Data About "Invader"</a></li>
+                            <li class="nav_item"><a href="">Screenshot</a></li>
+                            <li class="nav_item"><a href="">Ranking</a></li>
                             <li class="nav_item"><a href="">サイトの設定</a></li>
                         </ul>
                     </nav>
                 </div>
             </header>
-            <div class="bg-container">
-                <div class="bg1"></div>
-                <div class="bg2"></div>
-                <div class="bg3"></div>
+            <div class="bg-img">
+                <div class="bg-container">
+                    <div class="bg1"></div>
+                    <div class="bg2"></div>
+                    <div class="bg3"></div>
+                </div>
             </div>
             <div class="title-container">
                 <div class="title-inner">
                     <div class="sub-title">2-1 クラス企画</div>
-                    <div class="title">ここにロゴ</div>
+                    <div class="title">インベーダー</div>
+                </div>
+                <div class="cursor_title"></div>
+            </div>
+            <div class="introduction">
+                <div class="info-title">Introduction</div>
+                <div class="info-sub-title">序章</div>
+                <div class="intro-dialog-container">
+                    <div class="intro-dialog-frame">
+                        <div class="intro-dialog-corner intro-dialog-corner-anim intro-dialog-corner__top-left"></div>
+                        <div class="intro-dialog-corner intro-dialog-corner-anim intro-dialog-corner__bottom-left"></div>
+                        <div class="intro-dialog-corner intro-dialog-corner-anim intro-dialog-corner__top-right"></div>
+                        <div class="intro-dialog-corner intro-dialog-corner-anim intro-dialog-corner__bottom-right"></div>
+                        <div class="intro-dialog-frame-text intro-dialog-frame-text-anim">
+                            <div class="intro-dialog-frame-text-">
+                                時は20XX年<br />
+                                人類は宇宙を自由に旅できる技術を手に入れた<br />
+                                ここに続き...
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            メインコンテンツ<br />
-            ルール説明など...
+            <div class="info" id="info">
+                <div class="info-title">Data About "Invader"</div>
+                <div class="info-sub-title">"インベーダー"に関するデータ</div>
+                <div class="info_section">
+                    <div class="info_text">"このゲームはシューティングゲームである"</div>
+                </div>
+                <div class="info_section">
+                    <div class="info_text">"挑戦者はスマホを使って挑戦する"</div>
+                </div>
+                <div class="info_section">
+                    <div class="info_text">"現在、開発中..."</div>
+                </div>
+                <div class="info_section">
+                    <div class="info_text">"随時更新予定"</div>
+                </div>
+            </div>
+            <div class="screenshot">
+                <div class="info-title">Screenshot</div>
+                <div class="info-sub-title">スクリーンショット</div>
+            </div>
+            <div class="ranking">
+                <div class="info-title">Ranking</div>
+                <div class="info-sub-title">ランキング</div>
+            </div>
         </div>
     </body>
     <script src="./js/index.js"></script>

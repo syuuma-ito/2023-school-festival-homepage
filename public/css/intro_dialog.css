@@ -1,0 +1,105 @@
+:root {
+    --intro-dialog-RGBA-color: rgba(0, 255, 0, 0.65);
+    --intro-dialog-BG-color: rgba(0, 255, 0, 0.05);
+}
+
+.intro-dialog-frame {
+    display: block;
+    padding: 1px;
+    position: relative;
+}
+
+.intro-dialog-border-left {
+    top: 50%;
+    left: 0;
+    height: 100%;
+    transform: translate(0, -50%);
+    border-width: 0 0 0 1px;
+}
+
+.intro-dialog-border-anim {
+    z-index: 1;
+    opacity: 1;
+    position: absolute;
+    transition: all 250ms ease-in;
+    border-style: solid;
+}
+
+.intro-dialog-corner {
+    width: 24px;
+    height: 24px;
+}
+
+.intro-dialog-corner-anim {
+    z-index: 2;
+    opacity: 1;
+    position: absolute;
+    transition: all 250ms ease-in;
+    border-style: solid;
+}
+
+.intro-dialog-corner__top-left {
+    left: -2px;
+    top: -2px;
+    border-width: 2px 0 0 2px;
+}
+
+.intro-dialog-corner__bottom-left {
+    left: -2px;
+    bottom: -2px;
+    border-width: 0 0 2px 2px;
+}
+
+.intro-dialog-corner__top-right {
+    right: -2px;
+    top: -2px;
+    border-width: 2px 2px 0 0;
+}
+
+.intro-dialog-corner__bottom-right {
+    right: -2px;
+    bottom: -2px;
+    border-width: 0 2px 2px 0;
+}
+
+.intro-dialog-frame-text- {
+    padding: 1%;
+    font-size: 16px;
+    letter-spacing: 5px;
+}
+@media screen and (min-width: 960px) {
+    .intro-dialog-frame-text- {
+        padding: 1%;
+        font-size: 20px;
+        letter-spacing: 5px;
+    }
+}
+
+.intro-dialog-frame-text-anim {
+    z-index: 3;
+    display: block;
+    position: relative;
+    overflow: hidden;
+}
+
+.intro-dialog-container {
+    height: 100%;
+    margin-left: 10%;
+    margin-right: 10%;
+    width: 80%;
+}
+
+@media screen and (min-width: 960px) {
+    .intro-dialog-container {
+        line-height: 1.5;
+        margin-left: 10%;
+        margin-right: 10%;
+        width: 80%;
+    }
+}
+.intro-dialog-frame-text {
+    text-align: center;
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    color: #eee;
+    margin: 10px;
+}

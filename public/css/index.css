@@ -1,15 +1,20 @@
 @import url("https://fonts.googleapis.com/css2?family=DotGothic16&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New&display=swap");
 
 :root {
+    margin: 0;
+    padding: 0;
     font-family: "DotGothic16", sans-serif;
     --main-bg-color: #00060a;
     --main-text-color: #00ff00;
-    --primer-text-color: #029dbb;
+    --primer-text-color: #00c3ff;
 }
 
 body {
     background-color: var(--main-bg-color);
     color: var(--main-text-color);
+    margin: 0;
+    padding: 0;
 }
 
 .cursor-container {
@@ -96,7 +101,86 @@ body {
     transform: translate(-50%, -50%);
     -webkit-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
+    width: 100%;
 }
 .title {
     font-size: 40px;
+    width: 100%;
+}
+
+.cursor_title {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    width: 100%;
+    color: var(--main-text-color);
+}
+.cursor_title::before {
+    color: var(--main-text-color);
+    animation: scroll 2s infinite;
+    border: solid var(--main-text-color);
+    border-width: 0 0 2px 2px;
+    content: "";
+    display: inline-block;
+    margin: auto;
+    top: 0;
+    right: 0;
+    left: 0;
+    transform: rotate(-45deg);
+    width: 20px;
+    height: 20px;
+}
+.introduction {
+    background-color: rgba(174, 169, 250, 0.095);
+    padding: 20px 0 100px 0;
+}
+
+.info {
+    background-color: rgba(0, 120, 190, 0.1);
+    padding: 20px;
+}
+
+.info-title {
+    font-size: 18px;
+    letter-spacing: 4px;
+    margin: 10px 0px 0px 0px;
+}
+.info-sub-title {
+    font-size: 10px;
+    letter-spacing: 2px;
+    margin: 0px 0px 30px 0px;
+}
+
+.info_section {
+    text-align: left;
+    font-size: 16px;
+    border-radius: 1px;
+    border-left: thick solid var(--main-text-color);
+    border-width: 2px;
+    padding: 5px 0;
+    margin-bottom: 30px;
+}
+.info_text {
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    margin-left: 10px;
+    color: #eee;
+}
+@media screen and (min-width: 960px) {
+    .info {
+        padding: 40px;
+    }
+    .info-title {
+        font-size: 23px;
+    }
+    .info_section {
+        font-size: 18px;
+        border-width: 2px;
+        padding: 8px 0;
+    }
+    .info_text {
+        margin-left: 15px;
+    }
 }
