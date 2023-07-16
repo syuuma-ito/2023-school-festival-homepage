@@ -44,11 +44,12 @@
                     <label for="drawer_input" class="drawer_open"><span></span></label>
                     <nav class="nav_content">
                         <ul class="nav_list">
-                            <li class="nav_item"><a href="">Introduction</a></li>
+                            <li class="nav_item"><a href="#introduction">Introduction</a></li>
                             <li class="nav_item"><a href="#info">Data About "Invader"</a></li>
-                            <li class="nav_item"><a href="">Screenshot</a></li>
+                            <li class="nav_item"><a href="#screenshot">Screenshot</a></li>
                             <li class="nav_item"><a href="">Ranking</a></li>
                             <li class="nav_item"><a href="">サイトの設定</a></li>
+                            <li class="nav_item"><a onclick="openingAgain()">もう一度オープニングを再生する</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -67,7 +68,7 @@
                 </div>
                 <div class="cursor_title"></div>
             </div>
-            <div class="introduction">
+            <div class="introduction section" id="introduction">
                 <div class="info-title">Introduction</div>
                 <div class="info-sub-title">序章</div>
                 <div class="intro-dialog-container">
@@ -86,7 +87,7 @@
                     </div>
                 </div>
             </div>
-            <div class="info" id="info">
+            <div class="info section_" id="info">
                 <div class="info-title">Data About "Invader"</div>
                 <div class="info-sub-title">"インベーダー"に関するデータ</div>
                 <div class="info_section">
@@ -102,14 +103,29 @@
                     <div class="info_text">"随時更新予定"</div>
                 </div>
             </div>
-            <div class="screenshot">
+            <div class="screenshot section" id="screenshot">
                 <div class="info-title">Screenshot</div>
                 <div class="info-sub-title">スクリーンショット</div>
+                <div class="screenshot-container">
+                    <div class="screenshot-section">
+                        <img src="./img/tmp1.jpg" class="screenshot_img" />
+                        <div class="description">※テスト用の画像です。実際のゲーム画面とは関係ありません。</div>
+                    </div>
+                    <div class="screenshot-section">
+                        <img src="./img/tmp2.jpg" class="screenshot_img" />
+                        <div class="description">※テスト用の画像です。実際のゲーム画面とは関係ありません。</div>
+                    </div>
+                </div>
             </div>
-            <div class="ranking">
+            <div class="ranking section">
                 <div class="info-title">Ranking</div>
                 <div class="info-sub-title">ランキング</div>
+                <div class="">開発中...</div>
             </div>
+            <footer>
+                2 - 1 クラス企画 "インベーダー"<br />
+                © 2023 ItoSyuuma All Rights Reserved
+            </footer>
         </div>
     </body>
     <script src="./js/index.js"></script>

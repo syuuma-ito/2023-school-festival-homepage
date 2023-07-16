@@ -84,22 +84,14 @@
 
 .intro-dialog-container {
     height: 100%;
-    margin-left: 10%;
-    margin-right: 10%;
-    width: 80%;
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 90%;
 }
 
-@media screen and (min-width: 960px) {
-    .intro-dialog-container {
-        line-height: 1.5;
-        margin-left: 10%;
-        margin-right: 10%;
-        width: 80%;
-    }
-}
 .intro-dialog-frame-text {
     text-align: center;
     font-family: "Zen Kaku Gothic New", sans-serif;
-    color: #eee;
+    color: var(--white-text-color);
     margin: 10px;
 }
