@@ -73,9 +73,9 @@
 
 @keyframes warp {
     from {
-        transform: translateZ(-300px);
+        transform: rotate(-10deg) translateZ(-300px);
     }
     to {
-        transform: translateZ(300px);
+        transform: rotate(10deg) translateZ(300px);
     }
 }

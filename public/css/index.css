@@ -245,6 +245,7 @@ body {
 }
 
 footer {
+    padding: 20px;
     font-size: 10px;
     background-color: rgba(0, 0, 0, 0.5);
 }
