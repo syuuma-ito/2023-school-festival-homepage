@@ -109,6 +109,24 @@ body {
     width: 100%;
 }
 
+.title-img1 {
+    width: 70%;
+}
+.title-img2 {
+    width: 100%;
+    display: none;
+}
+
+@media screen and (max-width: 630px) {
+    .title-img1 {
+        display: none;
+    }
+    .title-img2 {
+        height: 70%;
+        display: inline;
+    }
+}
+
 .cursor_title {
     position: absolute;
     bottom: 50px;
