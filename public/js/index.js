@@ -10,7 +10,7 @@ function randomSelected(array, count) {
     return randomArray;
 }
 
-const opening_texts = ["時は20XX年...", "人類は自由に宇宙を旅できる技術を手に入れた...", "ここに続きの文章...（みんなで考える）"];
+const opening_texts = ["時は20XX年...", "日本上空になんの前触れもなく数十機のUFOが現れた。", "UFOに立ち向かうべく、世界の最新技術で作られた宇宙船に乗り宇宙人に立ち向かうのであった…。"];
 
 async function typing(selector, text, type_speed) {
     text_elemnt = document.querySelector(selector);
