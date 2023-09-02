@@ -49,12 +49,10 @@ function openingAgain() {
 }
 
 async function main() {
-    const keyName = "visited";
-
-    if (!localStorage.getItem(keyName)) {
+    if (!localStorage.getItem("visited")) {
         console.log("visited : false");
         await opening();
-        localStorage.setItem(keyName, true);
+        localStorage.setItem("visited", true);
     } else {
         console.log("visited : true");
         console.log("オープニングをスキップ");
