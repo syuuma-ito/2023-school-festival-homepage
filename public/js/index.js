@@ -1,5 +1,11 @@
 const sleep = (waitTime) => new Promise((resolve) => setTimeout(resolve, waitTime));
-const waitClick = () => new Promise((resolve) => document.addEventListener("click", resolve));
+// const waitClick = () => new Promise((resolve) => document.addEventListener("click", resolve));
+const waitClick = () =>
+    new Promise((resolve) => {
+        document.addEventListener("click", resolve);
+        document.addEventListener("keydown", resolve);
+        document.addEventListener("touchstart", resolve);
+    });
 function randomSelected(array, count) {
     const copyArray = [...array];
     const randomArray = [...Array(count)].map(() => {

@@ -92,6 +92,7 @@
 .intro-dialog-frame-text {
     text-align: center;
     font-family: "Zen Kaku Gothic New", sans-serif;
+    line-height: 1.7;
     font-style: normal;
     color: var(--white-text-color);
     margin: 10px;

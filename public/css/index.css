@@ -4,7 +4,8 @@
 :root {
     margin: 0;
     padding: 0;
-    font-family: "DotGothic16", sans-serif;
+    font-family: "DotGothic16", "Makinas", sans-serif;
+    /* font-family: "Makinas", sans-serif; */
     font-style: normal;
     --main-bg-color: #00060a;
     --main-text-color: #0f0;
@@ -39,7 +40,7 @@ body {
 }
 .cursor::before {
     color: var(--main-text-color);
-    animation: scroll 2s infinite;
+    animation: scroll 2s infinite ease-in-out;
     border: solid var(--main-text-color);
     border-width: 0 0 1px 1px;
     content: "";
@@ -57,7 +58,7 @@ body {
         transform: rotate(-45deg) translate(0, 0);
     }
     50% {
-        transform: rotate(-45deg) translate(-5px, 5px);
+        transform: rotate(-45deg) translate(-15px, 15px);
     }
     100% {
         transform: rotate(-45deg) translate(0, 0);
@@ -222,10 +223,14 @@ body {
 @media screen and (min-width: 960px) {
     .screenshot-container {
         display: flex;
+        flex-wrap: wrap;
+    }
+    .screenshot-section {
+        width: 50%;
     }
 }
 .description {
-    padding: 10px;
+    padding: 5px;
     font-size: 12px;
 }
 
